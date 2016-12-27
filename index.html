@@ -54,16 +54,19 @@
     </div>    
     
   </div>  
-  
+  <!-- this is modal for the new task -->
   <div id="myModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <input tpe="text" id="newtodo"/><br/>
-      <input type="button" value="submit" onclick="showdata() ;"/>
+      <input tpe="text" id="newtodo" class="newtodoinput"/><br/>
+     <br>
+      <button value="submit" onclick="showdata()" class="addbutton">
+      <i class="material-icons">send</i>
+      </button>
     </div>
-
   </div>
+
 
   <script src="Main.js"></script>
   <script src="newtodo.js"></script>
