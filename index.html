@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>egydo</title>
+  
+  <link rel="stylesheet" href="css/style.css"/>
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"/>
+
+  <meta name="theme-color" content="#1ECD97">
+
+  <link rel="icon" sizes="192x192" href="egyption code.png">
+  
+  <script src="javascript/jquery-3.1.1.js"></script>
+</head>
+<body id="body">  
+  <article>
+    
+    <section class="todo-element">
+      <p id="task">
+        demo first element
+      </p>
+      
+    </section>
+    <section>
+
+      <label id="labelnewtodo"></label><br/>
+     
+    </section>
+  
+  </article>
+
+  <div id="container-floating">
+    <button class="nd5 nds" onclick="newtodo()">
+      <i class="material-icons">done</i>
+    </button>
+
+    <button class="nd4 nds" id="" >
+      <i class="material-icons">new_releases</i>
+    </button>
+
+    <button class="nd3 nds">
+      <i class="material-icons">more_horiz</i>
+    </button>   
+    <button class="nd1 nds" id="myBtn" placeholder="First name">+</button>
+    
+    <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="newmail()" class="">
+      
+      <p class="plus" align="center">+</p>
+      
+      <img class="edit" src="http://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_compose2_1x.png">
+    </div>    
+    
+  </div>  
+  
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <input tpe="text" id="newtodo"/><br/>
+      <input type="button" value="submit" onclick="showdata() ;"/>
+    </div>
+
+  </div>
+
+  <script src="javascript/Main.js"></script>
+  <script src="javascript/newtodo.js"></script>
+</body>
+</html>
