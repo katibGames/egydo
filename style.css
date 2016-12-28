@@ -1,6 +1,24 @@
 BODY {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  background-color: #263238;
+}
+
+ol {
+  list-style-type: none;
+  align-content: center;
+}
+
+li {
+  color: #fefefe;
+  width: 90%;
+  background-color: #1ECD97;
+  border-radius: 15px;
+  padding:10px;
+  letter-spacing: 2px;
+  border: solid 10px; 
+  border-color: #263238; 
+  
 }
 .bottom {
   width : 100% ;
