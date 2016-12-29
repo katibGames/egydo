@@ -311,10 +311,10 @@ li {
 }
 
 /* The Close Button */
-.close {
+span {
   color: #fafafa;
   float: right;
-  font-size: 35px;
+  font-size: 20px;
   font-weight: bold;
 }
 
