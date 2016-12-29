@@ -5,7 +5,7 @@
     "src": "egyption code.png",
       "sizes": "128x128",
       "type": "image/png"
-    }]
+    }],
   "start_url": "/egydo",
   "display": "standalone",
   "background_color": "#263238",
