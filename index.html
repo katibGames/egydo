@@ -2,13 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>egydo</title>
-  
+
   <link rel="stylesheet" href="style.css"/>
-  
+
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet"/>
 
@@ -20,23 +20,23 @@
 
    <meta name="msapplication-TileImage" content="egyption code.png">
   <meta name="msapplication-TileColor" content="#1ECD97">
-  
+
   <script src="jquery-3.1.1.js"></script>
 </head>
-<body id="body">  
+<body id="body">
   <article>
-    
+
     <section class="todo-element">
       <ol id="ol">
-  
+
 </ol>
     </section>
     <section>
 
       <label id="labelnewtodo"></label><br/>
-     
+
     </section>
-  
+
   </article>
 
   <div id="container-floating">
@@ -50,23 +50,23 @@
 
     <button class="nd3 nds">
       <i class="material-icons">more_horiz</i>
-    </button>   
+    </button>
     <button class="nd1 nds" id="myBtn" placeholder="First name">+</button>
-    
+
     <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="newmail()" class="">
-      
+
       <p class="plus" align="center">+</p>
-      
+
       <img class="edit" src="http://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_compose2_1x.png">
-    </div>    
-    
-  </div>  
+    </div>
+
+  </div>
   <!-- this is modal for the new task -->
   <div id="myModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <input tpe="text" id="newtodo" class="newtodoinput"/><br/>
+      <input type="text" id="newtodo" class="newtodoinput"/><br/>
      <br>
       <button value="submit" onclick="showdata()" class="addbutton">
       <i class="material-icons">send</i>
@@ -74,9 +74,9 @@
     </div>
   </div>
 
-
   <script src="Main.js"></script>
   <script src="newtodo.js"></script>
   <script src="track.js"></script>
+
 </body>
 </html>

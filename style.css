@@ -10,15 +10,16 @@ ol {
 }
 
 li {
+  display: block;
   color: #fefefe;
   width: 90%;
   background-color: #1ECD97;
   border-radius: 15px;
   padding:10px;
   letter-spacing: 2px;
-  border: solid 10px; 
-  border-color: #263238; 
-  
+  border: solid 10px;
+  border-color: #263238;
+
 }
 .bottom {
   width : 100% ;
@@ -54,7 +55,7 @@ li {
 }
 
 .addbutton{
-  align : center;  
+  align : center;
   height: 70px;
   text-align: center;
   width: 95%;
@@ -67,7 +68,7 @@ li {
   text-shadow:0;
   right: 11px;
   bottom: 203px;
-  
+
 }
 
 .plus{
@@ -86,7 +87,7 @@ li {
   animation: plus-out 0.3s;
   transition: all 0.3s;
   text-align: center
-  
+
   }
 
 #container-floating{
@@ -124,7 +125,7 @@ li {
   transform: rotateZ(-70deg);
   transition: all 0.3s;
   animation: edit-out 0.3s;
-  
+
 }
 
 #container-floating:hover .edit{
@@ -192,7 +193,7 @@ li {
   color:#1ECD97;
   letter-spacing:1px;
   text-shadow:0;
-  
+
 }
 
 .nd3{
@@ -311,7 +312,14 @@ li {
 }
 
 /* The Close Button */
-span {
+.close {
+  color: #fafafa;
+  float: right;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.deltodo {
   color: #fafafa;
   float: right;
   font-size: 20px;

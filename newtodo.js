@@ -1,13 +1,8 @@
 function showdata() {
-  var newtodo = $("#newtodo").val();
-    $("ol").prepend("<li>" +
-     newtodo +
-    "<span>"
-    +"&times;"
-    +"</span>"
-     +"</l1>");
-}
+    var newtodo = $("#newtodo").val();
+    $("ol").append('<li class"batodo" >' + newtodo + '<span class="deltodo">' +"&times;" + '</span>' + "</li>");
+    $(".deltodo").click(function(){
+            $(this).parents("li:first").remove();
+        });
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
+};
