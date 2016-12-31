@@ -4,5 +4,5 @@ function showdata() {
     $(".deltodo").click(function(){
             $(this).parents("li:first").remove();
         });
-
+    modal.style.display = "none";
 };
