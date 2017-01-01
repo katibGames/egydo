@@ -11,12 +11,25 @@ BODY {
   padding: 0px;
   text-align: center;
   align-content: center;
+  border-radius: 30px;
 
 }
 
-ol {
+.title{
+  color: #263238;
+  float: left;
+  font-size: 20px;
+  padding-top: 15px;
+
+}
+
+.ol {
   list-style-type: none;
   align-content: center;
+}
+
+#doneol {
+  display: block;
 }
 
 li {
