@@ -22,12 +22,15 @@
   <meta name="msapplication-TileColor" content="#1ECD97">
 
   <script src="javascript/jquery-3.1.1.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 </head>
 <body id="body">
   <nav>
     <div class="nav">
       <img src="img/egydologo.png" width="50px" height"50px" align="left"></img>
       <span class="title" >egydo</span>
+      
+      
     </div>
   </nav>
   <article>
@@ -37,7 +40,6 @@
     </section>
     <section>
 
-      <label id="labelnewtodo"></label><br/>
 
     </section>
 
@@ -55,11 +57,11 @@
       <i class="material-icons">new_releases</i>
     </button>
 
-
-    <button class="nd3 nds">
-      <i class="material-icons">more_horiz</i>
+-->
+    <button id="user" class="nd3 nds">
+      <i class="material-icons">account_circle</i>
     </button>
-    -->
+    
     <button class="nd1 nds" id="myBtn" placeholder="First name">+</button>
 
     <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="newmail()" class="">
@@ -83,6 +85,20 @@
     </div>
   </div>
 
+  <!-- this is modal for the user -->
+  <div id="myModal2" class="modal2">
+    <!-- Modal content -->
+    <div class="modal-content2">
+      <span class="close2">&times;</span>
+      <input id="txtemail" class="newtodoinput"/><br>
+<input id="txtpassword" class="newtodoinput"/><br>
+<button class="userbuttons" id="signin">sign in</button>
+<button class="userbuttons" id="signup">sign up</button>
+<button class="userbuttons" id="signout">sign out</button>
+    </div>
+  </div>
+
+  <script src="javascript/app.js"></script>
   <script src="javascript/Main.js"></script>
   <script src="javascript/newtodo.js"></script>
   <script src="javascript/track.js"></script>

@@ -23,3 +23,31 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 };
+
+
+
+// Get the modal
+var modal2 = document.getElementById('myModal2');
+
+// Get the button that opens the modal
+var user = document.getElementById("user");
+
+// Get the <span> element that closes the modal
+var spani = document.getElementsByClassName("close2")[0];
+
+// When the user clicks the button, open the modal 
+user.onclick = function () {
+    modal2.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+spani.onclick = function () {
+    modal2.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+};
