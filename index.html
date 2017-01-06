@@ -2,25 +2,26 @@
 <html>
 <head>
   <meta charset="utf-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"/>
-
-  <title>egydo</title>
-
-  <link rel="stylesheet" href="css/style.css"/>
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet"/>
-
-  <meta name="theme-color" content="#1ECD97">
-
-  <link rel="icon" sizes="192x192" href="img/egydologo.png">
-
-  <link rel="manifest" href="manifest.json">
-
-   <meta name="msapplication-TileImage" content="img/egydologo.png">
+  <meta name="msapplication-TileImage" content="img/egydologo.png">
   <meta name="msapplication-TileColor" content="#1ECD97">
-
+  <meta name="theme-color" content="#1ECD97">
+  <title>egydo</title>
+  <!-- style
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <!-- logo
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" sizes="192x192" href="img/egydologo.png">
+  <link rel="manifest" href="manifest.json">
+  <!-- script
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="javascript/jquery-3.1.1.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 </head>
@@ -28,22 +29,15 @@
   <nav>
     <div class="nav">
       <img src="img/egydologo.png" width="50px" height"50px" align="left"></img>
-      <span class="title" >egydo</span>
-      
-      
+      <h1 class="title" >EGYdo</h1>
     </div>
   </nav>
   <article>
     <section class="todo-element">
       <ol id="ol"></ol>
-      <ol id="doneol"></ol>
+      
     </section>
-    <section>
-
-
-    </section>
-
-  </article>
+ </article>
 
   <div id="container-floating">
     <!--
@@ -76,7 +70,7 @@
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <input type="text" id="newtodo" class="newtodoinput"/><br/>
+      <input id="newtodo" placeholder="add your task" class="newtodoinput"/><br/>
      <br>
       <button value="submit" onclick="showdata()" class="addbutton">
       <i class="material-icons">send</i>
@@ -91,9 +85,9 @@
       <span class="close2">&times;</span>
       <input id="txtemail" class="newtodoinput"/><br>
 <input id="txtpassword" class="newtodoinput"/><br>
-<button class="userbuttons" id="signin">sign in</button>
-<button class="userbuttons" id="signup">sign up</button>
-<button class="userbuttons" id="signout">sign out</button>
+<a class="button button-primary" id="signin">sign in</a>
+<a class="button button-primary" id="signup">sign up</a>
+<a class="button button-primary" id="signout">sign out</a>
     </div>
   </div>
 
