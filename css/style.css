@@ -1,434 +1,87 @@
-BODY {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  background-color: #263238;
+body {
+    background: #263238;
+    font-family: 'El Messiri', sans-serif;
 }
 
-.user{
- 
+.bar {
+    -webkit-text-fill-color: #222222;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    background:linear-gradient(to right, #1ECD97, #1DE9B6)
 }
 
-.nav {
-  width:100%;
-  height: 50px;
-  background-color:#00e676;
-  padding: 0px;
-  text-align: center;
-  align-content: center;
-  border-radius: 0px;
-
+.search {
+    width: 90%;
+    height: 60px;
+    border: 0px solid;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'El Messiri', sans-serif;
 }
 
-.title{
-  color: #263238;
-  float: left;
-  padding-top: 15px;
-  font-size: 2.4rem;
-
+ul {
+    list-style-type: none;
+    padding: 2%;
+    margin: 0 0 30px 0;
 }
 
-.ol {
-  list-style-type: none;
-  align-content: center;
+.over12 {
+    height: 30px;
+    color: #222222;
+    background: #1ECD97;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border-radius: 3px;
+    text-align: right;
+    font-size: 30px;
+    margin: 0 0 15px 0;
 }
 
-#doneol {
-  display: block;
+.equal12 {
+    height: 30px;
+    color: #222222;
+    background: #1ECD97;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border-radius: 3px;
+    text-align: right;
+    font-size: 30px;
+    margin: 0 0 15px 0;
 }
 
-li {
-  display: block;
-  color: #fefefe;
-  width: 90%;
-  background-color: #00e676;
-  border-radius: 15px;
-  padding:10px;
-  letter-spacing: 2px;
-  border: solid 10px;
-  border-color: #263238;
-
-}
-.bottom {
-  width : 100% ;
-  height: 10%;
-  position: bottom;
-  background-color: #fff;
-  position: absolute;
-  top: 90%;
-  left: 0px;
-}
-#floating-button{
-  width: 100px;
-  height: 40px;
-  border-radius: 30px;
-  background: #00e676;
-  position: fixed;
-  bottom: 9px;
-  right: 10px;
-  cursor: pointer;
-  box-shadow: 0px 2px 5px #666;
-}
-.newtodoinput{
-  width: 95%;
-  border-radius: 5px;
-  height: 50px;
-  border: 4px solid ;
-  border-color: #00e676;
-  background-color: #263238;
-  color: white;
-   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  padding-left: 10px;
+.under12 {
+    height: 30px;
+    color: #222222;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    background: #1ECD97;
+    border-radius: 3px;
+    text-align: right;
+    font-size: 30px;
+    margin: 0 0 15px 0;
 }
 
-.addbutton{
-  align : center;
-  height: 70px;
-  text-align: center;
-  width: 95%;
-  border-radius:5px;
-  background: #b9f6ca;
-  border: 0px solid ;
-  border-color: #263238;
-  color:#263238;
-  letter-spacing:1px;
-  text-shadow:0;
-  right: 11px;
-  bottom: 203px;
-
+.time {
+     position: absolute;
+    left: 7%;
+    margin-top: 10px;
 }
 
-.userbuttons{
-  align : center;
-  height: 40px;
-  text-align: center;
-  width: 31%;
-  border-radius:5px;
-  background: #b9f6ca;
-  border: 0px solid ;
-  border-color: #263238;
-  color:#263238;
-  letter-spacing:1px;
-  text-shadow:0;
+.newtodo {
+    position: relative;
+    bottom: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 95%;
 }
 
-.plus{
-  color: #fff;
-  position: absolute;
-  top: 0;
-  display: block;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 3px;
-  margin: auto;
-  line-height: 30px;
-  font-size: 40px;
-  font-weight: 300;
-  animation: plus-out 0.3s;
-  transition: all 0.3s;
-  text-align: center
-
-  }
-
-#container-floating{
-  position: fixed;
-  width: 70px;
-  height: 70px;
-  bottom: 30px;
-  right: 3px;
-  z-index: 50px;
+.task {
+    width: 30%;
+    margin: 0 0 0 5px;
 }
 
-#container-floating:hover{
-  height: 400px;
-  width: 90px;
-  padding: 3px;
-}
-
-#container-floating:hover .plus{
-  animation: plus-in 0.15s linear;
-  animation-fill-mode: forwards;
-}
-
-.edit{
-  position: absolute;
-  top: 0;
-  display: block;
-  bottom: 0;
-  left: 0;
-  display: block;
-  right: 0;
-  padding: 0;
-  opacity: 0;
-  margin: auto;
-  line-height: 65px;
-  transform: rotateZ(-70deg);
-  transition: all 0.3s;
-  animation: edit-out 0.3s;
-
-}
-
-#container-floating:hover .edit{
-  animation: edit-in 0.2s;
-  animation-delay: 0.1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes edit-in{
-  from {opacity: 0; transform: rotateZ(-70deg);}
-  to {opacity: 1; transform: rotateZ(0deg);}
-}
-
-@keyframes edit-out{
-  from {opacity: 1; transform: rotateZ(0deg);}
-  to {opacity: 0; transform: rotateZ(-70deg);}
-}
-
-@keyframes plus-in{
-  from {opacity: 1; transform: rotateZ(0deg);}
-  to {opacity: 0; transform: rotateZ(180deg);}
-}
-
-@keyframes plus-out{
-  from {opacity: 0; transform: rotateZ(180deg);}
-  to {opacity: 1; transform: rotateZ(0deg);}
-}
-
-.nds{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  position: fixed;
-  z-index: 300;
-  transform:  scale(0);
-  cursor: pointer;
-  outline:none;
-  height: 40px;
-  text-align: center;
-  width: 30%;
-  border-radius:40px;
-  background: #fff;
-  border: 3px solid ;
-  color:#00e676;
-  letter-spacing:1px;
-  text-shadow:0;
-}
-
-.nd1{
-  background: #d3a411;
-  right: 11px;
-  bottom: 63px;
-  animation-delay: 0.2s;
-  animation: bounce-out-nds 0.3s linear;
-  animation-fill-mode:  forwards;
-  color: aliceblue;
-  font-size: 30px;
-  outline:none;
-  height: 40px;
-  text-align: center;
-  width: 100px;
-  border-radius:40px;
-  background: #fff;
-  border: 3px solid ;
-  color:#00e676;
-  letter-spacing:1px;
-  text-shadow:0;
-
-}
-
-.nd3{
-  background: #3c80f6;
-  right: 11px;
-  bottom: 110px;
-  animation-delay: 0.15s;
-  animation: bounce-out-nds 0.15s linear;
-  animation-fill-mode:  forwards;
-  outline:none;
-  height: 40px;
-  text-align: center;
-  width: 100px;
-  border-radius:40px;
-  background: #fff;
-  border: 3px solid ;
-  color:#00e676;
-  letter-spacing:1px;
-  text-shadow:0;
-}
-
-.nd4{
-  background: #ba68c8;
-  right: 11px;
-  bottom: 157px;
-  animation-delay: 0.1s;
-  animation: bounce-out-nds 0.1s linear;
-  animation-fill-mode:  forwards;
-  outline:none;
-  height: 40px;
-  text-align: center;
-  width: 100px;
-  border-radius:40px;
-  background: #fff;
-  border: 3px solid ;
-  color:#00e676;
-  letter-spacing:1px;
-  text-shadow:0;
-}
-
-.nd5{
-  background-size: 100%;
-  right: 11px;
-  bottom: 203px;
-  animation-delay: 0.08s;
-  animation: bounce-out-nds 0.1s linear;
-  animation-fill-mode:  forwards;
-  outline:none;
-  height: 40px;
-  text-align: center;
-  width: 100px;
-  border-radius:40px;
-  background: #fff;
-  border: 3px solid ;
-  color:#00e676;
-  letter-spacing:1px;
-  text-shadow:0;
-}
-
-@keyframes bounce-nds{
-  from {opacity: 0;}
-  to {opacity: 1; transform: scale(1);}
-}
-
-@keyframes bounce-out-nds{
-  from {opacity: 1; transform: scale(1);}
-  to {opacity: 0; transform: scale(0);}
-}
-
-#container-floating:hover .nds{
-
-  animation: bounce-nds 0.1s linear;
-  animation-fill-mode:  forwards;
-}
-
-#container-floating:hover .nd3{
-  animation-delay: 0.08s;
-}
-#container-floating:hover .nd4{
-  animation-delay: 0.15s;
-}
-#container-floating:hover .nd5{
-  animation-delay: 0.2s;
-}
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 30%; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  color: #00e676;
-  align-content: center;
-}
-
-/* Modal Content */
-.modal-content {
-  color:#00e676;
-  background-color: #00e676;
-  border: 0px;
-  margin: center;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  height: 50%;
-  bottom: 0px;
-  align-content: center;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-/* The Close Button */
-.close {
-  color: #fafafa;
-  float: right;
-  font-size: 38px;
-  font-weight: bold;
-}
-
-.deltodo {
-  color: #fafafa;
-  float: right;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-/* The Modal (background) */
-.modal2 {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 30%; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  color: #00e676;
-  align-content: center;
-}
-
-/* Modal Content */
-.modal-content2 {
-  color:#00e676;
-  background-color: #00e676;
-  border: 0px;
-  margin: center;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  height: 50%;
-  bottom: 0px;
-  align-content: center;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-/* The Close Button */
-.close2 {
-  color: #fafafa;
-  float: right;
-  font-size: 38px;
-  font-weight: bold;
-}
-
-
-
-.close2:hover,
-.close2:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
+span {
+    position: fixed;
+    left: 20%;
+    color: #222222}
