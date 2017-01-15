@@ -1,6 +1,6 @@
 body {
     background: #263238;
-    font-family: 'El Messiri', sans-serif;
+    font-family: 'cairo', sans-serif;
 }
 
 .bar {
@@ -12,12 +12,12 @@ body {
 }
 
 .search {
-    width: 90%;
-    height: 60px;
+    width: 80%;
+    height: 40px;
     border: 0px solid;
     text-align: center;
-    font-size: 30px;
-    font-family: 'El Messiri', sans-serif;
+    font-size: 20px;
+    font-family: 'cairo', sans-serif;
 }
 
 ul {
@@ -30,11 +30,11 @@ ul {
     height: 30px;
     color: #222222;
     background: #1ECD97;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     padding-right: 20px;
     border-radius: 3px;
     text-align: right;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0 0 15px 0;
 }
 
@@ -42,30 +42,30 @@ ul {
     height: 30px;
     color: #222222;
     background: #1ECD97;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     padding-right: 20px;
     border-radius: 3px;
     text-align: right;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0 0 15px 0;
 }
 
 .under12 {
     height: 30px;
     color: #222222;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     padding-right: 20px;
     background: #1ECD97;
     border-radius: 3px;
     text-align: right;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0 0 15px 0;
 }
 
 .time {
      position: absolute;
     left: 7%;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .newtodo {
