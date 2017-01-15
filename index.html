@@ -24,7 +24,15 @@
     </ul>
     <form class="newtodo" ng-submit="addtask()">
         <input type="text" placeholder="add your task" class="task" ng-model="name">
-        <input type="number" placeholder="time" class="task" ng-model="time">
+        <input type="number"
+               placeholder="time" 
+               class="task" 
+               ng-model="time"
+               ng-minlength="1" 
+               ng-maxlength="2" 
+               min="0" 
+               max="23.59"
+        >
         <input type="submit" class="submit" value="submit"> </form>
 </body>
 
