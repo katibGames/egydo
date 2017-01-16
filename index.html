@@ -16,24 +16,34 @@
 <body ng-controller="tasklist" class="body">
     <nav class="bar">
         <div ng-include="'img/egydologo.svg'"></div>
-        <input type="text" class="search" placeholder="دوٌر" ng-model="search"> </nav>
+        <input type="text" class="search" placeholder="دوٌر" ng-model="search">
+        
+    </nav>
     <ul>
         <li ng-repeat="item in list |filter:search | orderBy:'time' " ng-class="{'over12':item.time>12 , 'under12':item.time<12 , 'equal12':item.time==12}"> {{item.name}} <span>{{item.time}}</span>
             <a class="time" ng-include="'img/doneall.svg'" ng-click="remove(item)"></a>
         </li>
     </ul>
-    <form class="newtodo" ng-submit="addtask()">
-        <input type="text" placeholder="add your task" class="task" ng-model="name">
-        <input type="number"
-               placeholder="time" 
-               class="task" 
-               ng-model="time"
-               ng-minlength="1" 
-               ng-maxlength="2" 
-               min="0" 
-               max="23.59"
-        >
-        <input type="submit" class="submit" value="submit"> </form>
+    <div id="container-floating">
+        <button class="nd1 nds" id="myBtn">+</button>
+        <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="" class="">
+            <p class="plus" align="center">+</p>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content"> <button class="close">&times;</button>
+            
+            <form class="newtodo" ng-submit="addtask()">
+            <input type="text" placeholder="هات اخرك" class="newtodoinput" ng-model="name" ng-minlength="3" ng-maxlength="50">
+            <input type="number" placeholder="time" class="newtodoinput" ng-model="time" ng-minlength="1" ng-maxlength="2" min="0" max="23.59">
+                <input type="submit" class="submit" value="submit" >
+                 </form>
+            <br>
+            
+        </div>
+    </div>
+    <script src="js/Main.js"></script>
 </body>
 
 </html>

@@ -27,4 +27,5 @@ angular.module('egydo', []).controller('tasklist', function ($scope) {
         $scope.current = item
     };
     $scope.current = {} ;
+     
 })
