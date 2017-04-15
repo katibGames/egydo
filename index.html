@@ -1,50 +1,131 @@
 <html ng-app="egydo">
 
 <head>
-    <title>egydo </title>
-    <!--style-->
-    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <link rel="stylesheet" href="css/angular-material.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
-    <!-- links for pwa application-->
-    <meta name="msapplication-TileImage" content="img/egydologo.png">
-    <meta name="msapplication-TileColor" content="#1ECD97">
-    <meta name="theme-color" content="#1ECD97">
+
+    <title>EGYdo </title>
+
+    <!-- stylesheet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+     <!-- links for pwa application-->
+    <meta name="msapplication-TileImage" content="logo.png">
+    <meta name="msapplication-TileColor" content="#69f0ae">
+    <meta name="theme-color" content="#673AB7">
     <link rel="manifest" href="manifest.json">
-    <!--script-->
-    <script src="js/angular.min.js"></script>
-    <script src="js/directory.js"></script>
+
+    <!-- script -->
+    <script src="javascript/material.min.js"></script>
+    <script src="javascript/angular.min.js"></script>
+    <script src="javascript/angular-animate.min.js"></script>
+    <script src="javascript/ngStorage.min.js"></script>
+    <script src="javascript/index.js"></script>
+    <script src="upup.js"></script>
+
 </head>
 
-<body ng-controller="tasklist as dirlist" class="body">
-    <!--navigation-->
-    <nav class="bar">
-        <!--app logo-->
-        <div ng-include="'img/egydologo.svg'"></div>
-        <!--search-->
-        <input type="text" class="search" placeholder="دوٌر" ng-model="search">
-        <!--new task-->
-        <button class="button" ng-if="!dirlist.toggle" ng-click="dirlist.toggle = true">انا عايز</button>
-        
-        <form ng-class="{'hidden': !dirlist.toggle}" class="form" ng-submit="dirlist.addtask()">
-                <input class="ntask" type="text" placeholder="هات اخرك" class="newtodoinput" ng-model="dirlist.name" ng-minlength="3" ng-maxlength="50">
-                <input class="ntask" type="number" placeholder="الساعة كام" class="newtodoinput" ng-model="dirlist.time" ng-minlength="1" ng-maxlength="2" min="0" max="23.59">
-                <div></div>
-                <input type="submit" class="button" value="submit">
-            </form>
-        <button class="button" ng-if="dirlist.toggle" ng-click="dirlist.toggle = false">كبٌر دماغك</button>    
-    </nav>
-    <ul>
-        <!--list item-->
-        <li ng-repeat="item in dirlist.list |filter:search | orderBy:'time' " ng-class="{'over12':item.time>12 , 'under12':item.time<12 , 'equal12':item.time==12}">
-            {{item.name}} <span>{{item.time}}</span>
-            <a class="time" ng-include="'img/doneall.svg'" ng-click="dirlist.remove(item)"></a>
-        </li>
-    </ul>
-    
-    
-   
+<body ng-controller="task as dirlist">
+    <!-- Simple header with fixed tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+        <header class="mdl-layout__header">
+
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">EGYdo</span>
+
+            </div>
+
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#fixed-tab-1" class="mdl-layout__tab is-active">tasks</a>
+                <a href="#fixed-tab-2" class="mdl-layout__tab">add</a>
+                <!-- <a href="#fixed-tab-3" class="mdl-layout__tab">help</a> -->
+            </div>
+
+        </header>
+
+        <!-- <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Title</span>
+        </div> -->
+
+        <main class="mdl-layout__content">
+
+            <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+
+                <div class="page-content">
+                    <!-- Your content goes here -->
+
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:80%;margin-left:10%">
+                            <input class="mdl-textfield__input" type="search" ng-model="search" id="sample3">
+                            <label class="mdl-textfield__label" for="sample3">search</label>
+                        </div>
+                    </form>
+                    <div class="spacer" style="height: 2px;"></div>
+                    <div class="date">
+                    <p style="position:absolute;margin-left:40px;font-size:16px;padding-top:13px;color:white">{{ dirlist.today | date:"dd  MMM" }}</p>
+                    </div>
+                    <div ng-repeat="item in dirlist.list |filter:search | orderBy:'time'" ng-dblclick="dirlist.remove(item)" class="li">
+                        <span style="position:absolute;left:5%;margin-top: 13px;font-size: 20px;">{{item.name}}</span>
+                        <span style="font-size:15px;position:absolute;right:30%;margin-top: 15px" ng-dblclick="dirlist.remove(item)">{{item.type}}</span>
+                        <span margin="right" style="font-size:15px;position:absolute;right:10%;margin-top: 15px" ng-dblclick="dirlist.remove(item)">{{item.time | date: "h:mma"}}</span> </div>
+                    <div ng-repeat="object in dirlist.pray"> <li>{{object}}</li> </div>
+                    <div ng-if="dirlist.load()" ng-init="dirlist.loadData()"></div>
+                </div>
+                 
+
+            </section>
+
+            <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+
+                <div class="page-content">
+                   
+                    <form ng-submit="dirlist.addtask()" class="list">
+                        <p style="margin-left:10%;font-size:20px;font-weight:600;font-color:#232323;margin-top:20px;">task</p>
+                        <div class="mdl-textfield mdl-js-textfield" style="position:relative;left:10%;width:80%">
+                            <input ng-model="dirlist.name" class="mdl-textfield__input" type="text" id="sample1">
+
+                        </div>
+                        <div></div>
+
+                        <p style="margin-left:10%;font-size:20px;font-weight:600;font-color:#232323">time</p>
+                        <div class="mdl-textfield mdl-js-textfield" style="position:relative;left:10%;width:80%">
+                            <input ng-model="dirlist.time" class="mdl-textfield__input" type="time" id="sample1">
+                        </div>
+
+                        <div>
+                            <p style="margin-left:10%;font-size:20px;font-weight:600;font-color:#232323">type</p>
+                        </div>
+
+                        <div class="mdl-textfield mdl-js-textfield" style="position:relative;left:10%;width:80%">
+                            <input ng-model="dirlist.type" class="mdl-textfield__input" type="text" id="sample1">
+                            <label class="mdl-textfield__label" for="sample1">type</label>
+                        </div>
+
+                        <div class="spacer" style="height: 10px;"></div>
+
+                        <div style="height:20px"></div>
+                        <button type="submit" ng-click="dirlist.toggle = false" id="tasks-button5" style="font-weight:600;width:90%;margin-right:5%;margin-left:5%;height:50px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">submit </button>
+                    </form>
+
+                </div>
+
+            </section>
+
+            <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                </div>
+
+            </section>
+
+        </main>
+
+        </div>
+
 </body>
 
 </html>

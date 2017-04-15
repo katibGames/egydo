@@ -1,0 +1,48 @@
+.li {
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 15px;
+    background: black;
+    height: 50px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    color: white;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.date {
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 15px;
+    background: grey;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-color: white;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.li.ng-enter {
+    transition: .2s linear all;
+    opacity: 0;
+    transform: translateX(30px)
+}
+
+.li.ng-enter.ng-enter-active {
+    opacity: 1;
+    transform: translateX(0px)
+}
+
+.li.ng-leave {
+    transition: .2s linear all;
+    opacity: 1;
+    transform: translateX(0px)
+}
+
+.li.ng-leave.ng-leave-active {
+    opacity: 0;
+    transform: translateX(30px)
+}
