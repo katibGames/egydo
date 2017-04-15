@@ -5,7 +5,7 @@ export default StyleSheet.create({
     'marginTop': [{ 'unit': 'px', 'value': 5 }],
     'fontWeight': '400',
     'fontSize': [{ 'unit': 'px', 'value': 15 }],
-    'background': 'black',
+    'background': 'grey',
     'height': [{ 'unit': 'px', 'value': 50 }],
     'borderRadius': '3px',
     'marginBottom': [{ 'unit': 'px', 'value': 10 }],
@@ -18,14 +18,16 @@ export default StyleSheet.create({
     'marginTop': [{ 'unit': 'px', 'value': 5 }],
     'fontWeight': '400',
     'fontSize': [{ 'unit': 'px', 'value': 15 }],
-    'background': 'grey',
-    'height': [{ 'unit': 'px', 'value': 50 }],
-    'borderRadius': '5px',
-    'marginBottom': [{ 'unit': 'px', 'value': 10 }],
-    'fontColor': 'white',
-    'width': [{ 'unit': '%H', 'value': 0.8 }],
-    'marginLeft': [{ 'unit': '%H', 'value': 0.1 }],
-    'marginRight': [{ 'unit': '%H', 'value': 0.1 }]
+    'background': '#212121',
+    // For browsers that do not support gradients
+    'height': [{ 'unit': 'px', 'value': 40 }],
+    'borderRadius': '0px',
+    'marginBottom': [{ 'unit': 'px', 'value': 5 }],
+    'color': 'white',
+    'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
+    'marginLeft': [{ 'unit': '%H', 'value': 0 }],
+    'marginRight': [{ 'unit': '%H', 'value': 0 }],
+    'paddingLeft': [{ 'unit': '%H', 'value': 0.42 }]
   },
   'ling-enter': {
     'transition': '.2s linear all',

@@ -34,9 +34,8 @@
 
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">EGYdo</span>
-
-            </div>
+                <span class="mdl-layout-title">EGYdo {{ dirlist.today | date:"dd  MMM" }}</span>
+                 </div>
 
             <!-- Tabs -->
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
@@ -65,9 +64,7 @@
                         </div>
                     </form>
                     <div class="spacer" style="height: 2px;"></div>
-                    <div class="date">
-                    <p style="position:absolute;margin-left:40px;font-size:16px;padding-top:13px;color:white">{{ dirlist.today | date:"dd  MMM" }}</p>
-                    </div>
+                    
                     <div ng-repeat="item in dirlist.list |filter:search | orderBy:'time'" ng-dblclick="dirlist.remove(item)" class="li">
                         <span style="position:absolute;left:5%;margin-top: 13px;font-size: 20px;">{{item.name}}</span>
                         <span style="font-size:15px;position:absolute;right:30%;margin-top: 15px" ng-dblclick="dirlist.remove(item)">{{item.type}}</span>

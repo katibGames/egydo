@@ -2,7 +2,7 @@
     margin-top: 5px;
     font-weight: 400;
     font-size: 15px;
-    background: black;
+    background: grey;
     height: 50px;
     border-radius: 3px;
     margin-bottom: 10px;
@@ -15,14 +15,15 @@
     margin-top: 5px;
     font-weight: 400;
     font-size: 15px;
-    background: grey;
-    height: 50px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-color: white;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    background: #212121; /* For browsers that do not support gradients */    
+    height: 40px;
+    border-radius: 0px;
+    margin-bottom: 5px;
+    color: white;
+    padding: 0px;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-left: 42%
 }
 
 .li.ng-enter {
