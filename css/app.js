@@ -17,6 +17,29 @@ export default StyleSheet.create({
     'marginLeft': [{ 'unit': '%H', 'value': 0.03 }],
     'marginRight': [{ 'unit': '%H', 'value': 0.03 }]
   },
+  'note': {
+    'background': '#212121',
+    'width': [{ 'unit': '%H', 'value': 0.9 }],
+    'padding': [{ 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }],
+    'marginBottom': [{ 'unit': 'px', 'value': 20 }],
+    'position': 'absolute',
+    'left': [{ 'unit': '%H', 'value': 0.02 }],
+    'right': [{ 'unit': '%H', 'value': 0.02 }]
+  },
+  'notetype': {
+    'color': '#424242',
+    'fontSize': [{ 'unit': 'px', 'value': 20 }],
+    'margin': [{ 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }],
+    'marginTop': [{ 'unit': 'px', 'value': 20 }]
+  },
+  'notetext': {
+    'background': '#212121',
+    'width': [{ 'unit': '%H', 'value': 1 }],
+    'padding': [{ 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }, { 'unit': 'px', 'value': 10 }],
+    'fontSize': [{ 'unit': 'px', 'value': 20 }],
+    'border': [{ 'unit': 'string', 'value': 'none' }],
+    'color': '#fefefe'
+  },
   'date': {
     'marginTop': [{ 'unit': 'px', 'value': 5 }],
     'fontWeight': '400',

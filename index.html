@@ -97,10 +97,10 @@
                         </div>
                     </form>
                     <div class="spacer" style="height: 2px;"></div>
-                    <div ng-repeat="item in dirlist.note |filter:search | orderBy:'time'" ng-dblclick="dirlist.removenote(item)" class="li">
-                        <textarea style="position:absolute;left:5%;margin-top: 13px;font-size: 20px;">{{item.name}}</textarea>
-                        <span style="font-size:15px;position:absolute;right:30%;margin-top: 15px" ng-dblclick="dirlist.remove(item)">{{item.type}}</span>
-                        <span margin="right" style="font-size:15px;position:absolute;right:10%;margin-top: 15px" ng-dblclick="dirlist.remove(item)">{{item.time | date: "h:mma"}}</span>                        
+                    <div ng-repeat="item in dirlist.note |filter:search | orderBy:'time'" ng-dblclick="dirlist.removenote(item)" class="note">
+                        <span class="notetype" ng-dblclick="dirlist.remove(item)">{{item.type}}</span>
+                        <textarea  class="notetext" cols="80" rows="10">{{item.name}}</textarea>
+                        
                     </div>
                 </div>
             </section>
