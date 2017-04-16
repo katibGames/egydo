@@ -6,6 +6,7 @@ angular.module('egydo', ['ngStorage','ngAnimate']).controller('task', [
         var dirlist = this;   
         dirlist.today = new Date();
         dirlist.list = [];
+        dirlist.note = [];
         dirlist.toggle = false;
         dirlist.addtask = function() {
             dirlist.list.push({name: dirlist.name, time: dirlist.time, type: dirlist.type});
@@ -14,11 +15,25 @@ angular.module('egydo', ['ngStorage','ngAnimate']).controller('task', [
             dirlist.type = '';
             $localStorage.list = dirlist.list;
         };
+        dirlist.addnote = function() {
+            dirlist.note.push({name: dirlist.name, time: dirlist.time, type: dirlist.type});
+            dirlist.name = '';
+            dirlist.time = '';
+            dirlist.type = '';
+            $localStorage.note = dirlist.note;
+        };
+        dirlist.left = function() {
+        return 100 - dirlist.note.length;
+    };
+
         $http.get("prayertimedata.js")
     .then(function (response) {dirlist.prayer = records.data.records;});
     
         dirlist.remove = function(item) {
             dirlist.list.splice(dirlist.list.indexOf(item), 1)
+        };
+         dirlist.removenote = function(item) {
+            dirlist.note.splice(dirlist.note.indexOf(item), 1)
         };
         dirlist.load = function() {
             for (var i = 0; i < $localStorage.list.length; i++) {
