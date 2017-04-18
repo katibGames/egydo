@@ -8,5 +8,6 @@ UpUp.start({
             'javascript/angular-animate.min.js',
             'javascript/ngStorage.min.js',
             'javascript/index.js',
+			'index.html',
 		]
 	});

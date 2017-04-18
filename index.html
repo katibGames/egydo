@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="css/material.min.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- links for pwa application-->
     <meta name="msapplication-TileImage" content="logo.png">
     <meta name="msapplication-TileColor" content="#000">
     <meta name="theme-color" content="#03A9F4">
     <link rel="manifest" href="manifest.json">
+
     <!-- script -->
     <script src="javascript/material.min.js"></script>
     <script src="javascript/angular.min.js"></script>
@@ -20,7 +22,6 @@
     <script src="javascript/index.js"></script>
     <script src="upup.js"></script>
 </head>
-
 <body ng-controller="task as dirlist">
     <!-- header with fixed tabs -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
@@ -33,14 +34,21 @@
             <!-- Tabs -->
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
                 <a href="#fixed-tab-1" class="mdl-layout__tab is-active">tasks</a>
-                <a href="#fixed-tab-2" class="mdl-layout__tab">add</a>
-                <a href="#fixed-tab-3" class="mdl-layout__tab">notes</a> 
-                <a href="#fixed-tab-4" class="mdl-layout__tab">add note</a> 
+                <a class="mdl-layout__tab" style="position:fixed;left:0%;bottom:0%;width:50%;height:40px;border:none;background:#2e2e2e;color:#efefef"
+                    href="#fixed-tab-2">
+                    add task
+                </a>
+                <a class="mdl-layout__tab" style="position:fixed;right:0%;bottom:0%;width:50%;height:40px;border:none;background:#03A9F4"
+                    href="#fixed-tab-4">
+                    add note
+                </a>
+                <a href="#fixed-tab-3" class="mdl-layout__tab">notes</a>
             </div>
         </header>
         <!-- <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Title</span>
         </div> -->
+
         <main class="mdl-layout__content">
             <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
                 <div class="page-content">
@@ -54,9 +62,7 @@
                     <div ng-repeat="item in dirlist.list |filter:search | orderBy:'time'" ng-dblclick="dirlist.remove(item)" class="li">
                         <span style="position:absolute;left:5%;margin-top: 13px;font-size: 20px;">{{item.name}}</span>
                         <span style="font-size:15px;position:absolute;right:30%;margin-top: 15px" ng-dblclick="dirlist.remove(item)">{{item.type}}</span>
-                        <span margin="right" style="font-size:15px;position:absolute;right:10%;margin-top: 15px" ng-dblclick="dirlist.remove(item)">{{item.time | date: "h:mma"}}</span>                        </div>
-                    <div ng-repeat="object in dirlist.pray">
-                        <li>{{object}}</li>
+                        <span margin="right" style="font-size:15px;position:absolute;right:10%;margin-top: 15px" ng-dblclick="dirlist.remove(item)">{{item.time | date: "h:mma"}}</span>
                     </div>
                     <div ng-if="dirlist.load()" ng-init="dirlist.loadData()"></div>
                 </div>
@@ -99,12 +105,12 @@
                     <div class="spacer" style="height: 2px;"></div>
                     <div ng-repeat="item in dirlist.note |filter:search | orderBy:'time'" ng-dblclick="dirlist.removenote(item)" class="note">
                         <span class="notetype" ng-dblclick="dirlist.remove(item)">{{item.type}}</span>
-                        <textarea  class="notetext" cols="80" rows="10">{{item.name}}</textarea>
-                        
+                        <textarea class="notetext" cols="80" rows="10">{{item.name}}</textarea>
+
                     </div>
                 </div>
             </section>
-             <section class="mdl-layout__tab-panel" id="fixed-tab-4">
+            <section class="mdl-layout__tab-panel" id="fixed-tab-4">
                 <div class="page-content">
                     <form ng-submit="dirlist.addnote()" class="list">
                         <p style="margin-left:10%;font-size:20px;font-weight:600;color:#232323;margin-top:20px;">note</p>
@@ -112,7 +118,6 @@
                             <textarea ng-model="dirlist.name" class="mdl-textfield__input" type="text" id="sample1" cols="80" rows="10"></textarea>
                         </div>
                         <div></div>
-                        
                         <div>
                             <p style="margin-left:10%;font-size:20px;font-weight:600;color:#232323">type</p>
                         </div>
@@ -128,7 +133,7 @@
                 </div>
             </section>
         </main>
-        </div>
+    </div>
 </body>
 
 </html>
